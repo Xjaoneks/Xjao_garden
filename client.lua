@@ -10,6 +10,7 @@ SetBlipAsShortRange(GardBlip, true)
 
 BeginTextCommandSetBlipName('GardBlip')
 AddTextEntry('GardBlip','Práce zahradníka')
+AddTextComponentSubstringPlayerName('GardBlip')
 EndTextCommandSetBlipName(GardBlip)
 
 end)
@@ -46,13 +47,15 @@ local option ={
 								type = "success"
 							})
 							local test = vec3(-970.6332, 319.0799, 70.4962)
-							local testblip = AddBlipForCoord(test.x,test.y,test.z)
+							testblip = AddBlipForCoord(test.x,test.y,test.z)
 												SetBlipSprite(testblip,133)
 												SetBlipColour(testblip,11)
-												AddTextEntry("testblip","Keřík")
-												BeginTextCommandSetBlipName("testblip")
 												SetBlipDisplay(testblip, 4)
 												SetBlipAsShortRange(testblip, true)
+												BeginTextCommandSetBlipName("testblip")
+												AddTextEntry("testblip","Kerík")
+												AddTextComponentSubstringPlayerName('testblip')
+												EndTextCommandSetBlipName(testblip)
 								exports.ox_target:addBoxZone({
 								name = "test",
 								coords = test,
@@ -93,13 +96,15 @@ local option ={
 
 							})
 							local test2 = vec3(-946.5764, 340.6733, 71.5569)
-							local test2blip = AddBlipForCoord(test2.x,test2.y,test2.z)
+							test2blip = AddBlipForCoord(test2.x,test2.y,test2.z)
 												SetBlipSprite(test2blip,133)
 												SetBlipColour(test2blip,11)
-												AddTextEntry("test2blip","Keřík")
-												BeginTextCommandSetBlipName("test2blip")
 												SetBlipDisplay(test2blip, 4)
 												SetBlipAsShortRange(test2blip, true)
+												BeginTextCommandSetBlipName("test2blip")
+												AddTextEntry("test2blip","Kerík")
+												AddTextComponentSubstringPlayerName('test2blip')
+												EndTextCommandSetBlipName(test2blip)
 							exports.ox_target:addBoxZone({
 								name = "test2",
 								coords = test2,
@@ -140,13 +145,15 @@ local option ={
 
 							})
 							local test3 = vec3(-956.3531, 322.7000, 71.2877)
-							local test3blip = AddBlipForCoord(test3.x,test3.y,test3.z)
+							test3blip = AddBlipForCoord(test3.x,test3.y,test3.z)
 												SetBlipSprite(test3blip,133)
 												SetBlipColour(test3blip,11)
-												AddTextEntry("test3blip","Keřík")
-												BeginTextCommandSetBlipName("test3blip")
 												SetBlipDisplay(test3blip, 4)
 												SetBlipAsShortRange(test3blip, true)
+												BeginTextCommandSetBlipName("test3blip")
+												AddTextEntry("test3blip","Kerík")
+												AddTextComponentSubstringPlayerName('test3blip')
+												EndTextCommandSetBlipName(test3blip)
 							exports.ox_target:addBoxZone({
 								name = "test3",
 								coords = test3,
@@ -186,13 +193,15 @@ local option ={
 
 							})
 							local test4 = vec3(-967.1298, 337.2740, 71.4294)
-							local test4blip = AddBlipForCoord(test4.x,test4.y,test4.z)
+							test4blip = AddBlipForCoord(test4.x,test4.y,test4.z)
 												SetBlipSprite(test4blip,133)
 												SetBlipColour(test4blip,11)
-												AddTextEntry("test4blip","Keřík")
-												BeginTextCommandSetBlipName("test4blip")
 												SetBlipDisplay(test4blip, 4)
 												SetBlipAsShortRange(test4blip, true)
+												BeginTextCommandSetBlipName("test4blip")
+												AddTextEntry("test4blip","Kerík")
+												AddTextComponentSubstringPlayerName('test4blip')
+												EndTextCommandSetBlipName(test4blip)
 							exports.ox_target:addBoxZone({
 								name = "test4",
 								coords = test4,
@@ -233,13 +242,15 @@ local option ={
 
 							})
 							local test5 = vec3(-1006.0609, 308.0308, 68.3213)
-							local test5blip = AddBlipForCoord(test5.x,test5.y,test5.z)
+							test5blip = AddBlipForCoord(test5.x,test5.y,test5.z)
 												SetBlipSprite(test5blip,133)
 												SetBlipColour(test5blip,11)
-												AddTextEntry("test5blip","Keřík")
-												BeginTextCommandSetBlipName("test5blip")
 												SetBlipDisplay(test5blip, 4)
 												SetBlipAsShortRange(test5blip, true)
+												BeginTextCommandSetBlipName("test5blip")
+												AddTextEntry("test5blip","Kerík")
+												AddTextComponentSubstringPlayerName('test65blip')
+												EndTextCommandSetBlipName(test5blip)
 							exports.ox_target:addBoxZone({
 								name = "test5",
 								coords = test5,
@@ -279,13 +290,15 @@ local option ={
 
 							})
 							local test6 = vec3(-986.2417, 305.3724, 69.1924)
-							local test6blip = AddBlipForCoord(test6.x,test6.y,test6.z)
+							test6blip = AddBlipForCoord(test6.x,test6.y,test6.z)
 												SetBlipSprite(test6blip,133)
 												SetBlipColour(test6blip,11)
-												AddTextEntry("test6blip","Keřík")
-												BeginTextCommandSetBlipName("test6blip")
 												SetBlipDisplay(test6blip, 4)
 												SetBlipAsShortRange(test6blip, true)
+												BeginTextCommandSetBlipName("test6blip")
+												AddTextEntry("test6blip","Kerík")
+												AddTextComponentSubstringPlayerName('test6blip')
+												EndTextCommandSetBlipName(test6blip)
 							exports.ox_target:addBoxZone({
 								name = "test6",
 								coords = test6,
@@ -336,13 +349,15 @@ local option ={
 				icon = "fa-solid fa-hand",
 				onSelect = function ()
 					if isHavingAjob then
-					lib.notify( {
+					lib.notify({
 						title = "Manažer",
 						description = "Ukončil si práci",
 						type = "inform"
-					} )
-					isHavingAjob = false	
-				end
+					})  RemoveBlip(testblip) RemoveBlip(test2blip) RemoveBlip(test3blip) RemoveBlip(test4blip) RemoveBlip(test5blip) RemoveBlip(test6blip) exports.ox_target:removeZone("test") exports.ox_target:removeZone("test2") exports.ox_target:removeZone("test3") exports.ox_target:removeZone("test4") exports.ox_target:removeZone("test5") exports.ox_target:removeZone("test6")
+
+					isHavingAjob = false
+
+					end
 				end
 			}
 					  }
