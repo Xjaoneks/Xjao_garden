@@ -1,5 +1,5 @@
 <p align="center">
-<img align="center" width="600" src="https://cdn.discordapp.com/attachments/834795952182394941/1212635883799314492/XJAONEKS_banner.png?ex=65f28e2c&is=65e0192c&hm=7469f57b27ecf7bbd34d6f657d8899bf6391799155512a4d8679a31ddd3eecff&">
+<img align="center" src="https://cdn.discordapp.com/attachments/849723357313499166/1213231453048143912/1000_cb20150812165826.png?ex=65f4b8d7&is=65e243d7&hm=330c80cc886ae314b57ffde12f8cd5b1f525d11255ebe8566b9718f2f53b238b&">
 </p>
 
 ## Script is made for ESX
