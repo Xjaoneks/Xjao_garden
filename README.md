@@ -5,13 +5,13 @@
 ## Script is made for ESX
 
 # Depencies
-ox_target
+ox_target,
 ox_lib
-
-# If you know little bit of deving then you dont nead config
 
 ## Credits:
 miskaslzickou: https://github.com/miskaslzickou
 
 # Info:
-My first "job" please dont beat me for my skills XD
+If you know little bit of deving you can configure it.
+
+(My skill are low RN about scripting. Please be polite)
