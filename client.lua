@@ -9,7 +9,7 @@ SetBlipDisplay(GardBlip, 4)
 SetBlipAsShortRange(GardBlip, true)
 
 BeginTextCommandSetBlipName('GardBlip')
-AddTextEntry('GardBlip','Práce zahradníka')
+AddTextEntry('GardBlip','Gardnerer job')
 AddTextComponentSubstringPlayerName('GardBlip')
 EndTextCommandSetBlipName(GardBlip)
 
@@ -18,32 +18,32 @@ end)
 isHavingAjob = false
 
 local option ={
-	label = "Promluvit si s pánem",
+	label = "Talk with manager",
 	name = "gardener",
 	distance = 5,
 	icon = "fa-solid fa-scissors",
 	onSelect = function()
 		lib.registerContext({
 			id = "gardenjob",
-			title = "Zahradník",
+			title = "Gardener",
 			options = { 
 			{ 
-				title = "Začít práci",
+				title = "Start working",
 				icon = "fa-solid fa-inbox",
 				onSelect = function()
 						if isHavingAjob then
 
 							lib.notify({
-								title = "Manažer",
-								description = "Musíš dodělat co si začal a nebo zrušit práci",
+								title = "Manager",
+								description = "You need to complete your job",
 								type = "error"
 							})
 
 							else 
 
 							lib.notify({
-								title = "Manažer",
-								description = "Můžeš začít s prací",
+								title = "Manager",
+								description = "You can start working",
 								type = "success"
 							})
 							local test = vec3(-970.6332, 319.0799, 70.4962)
@@ -53,7 +53,7 @@ local option ={
 												SetBlipDisplay(testblip, 4)
 												SetBlipAsShortRange(testblip, true)
 												BeginTextCommandSetBlipName("testblip")
-												AddTextEntry("testblip","Kerík")
+												AddTextEntry("testblip","Bush")
 												AddTextComponentSubstringPlayerName('testblip')
 												EndTextCommandSetBlipName(testblip)
 								exports.ox_target:addBoxZone({
@@ -67,11 +67,11 @@ local option ={
 												name = "animace",
 												event = "ox_target:debug",
 												icon = "fa-solid fa-trowel",
-												label = "Pracovat",
+												label = "Start working",
 												onSelect = function()
 												if lib.progressBar({
 													duration = 5000,
-													label = "Pracování",
+													label = "Working...",
 													useWhileDead = false,
 													canCancel = true,
 													disable = {
@@ -88,7 +88,7 @@ local option ={
 														rot = vec3(0.0, 0.0, 0.0),
 														bone = 28422
 													},
-												}) then exports.ox_target:removeZone("test") TriggerServerEvent("GiveReward") RemoveBlip(testblip) else lib.notify( {title = "Manažer", description = "Dočesej ten keřík!", type = "error"} ) RemoveBlip(testblip)
+												}) then exports.ox_target:removeZone("test") TriggerServerEvent("GiveReward") RemoveBlip(testblip) else lib.notify( {title = "Manager", description = "Do your job properly!", type = "error"} ) RemoveBlip(testblip)
 												 end
 											end
 										}
@@ -102,7 +102,7 @@ local option ={
 												SetBlipDisplay(test2blip, 4)
 												SetBlipAsShortRange(test2blip, true)
 												BeginTextCommandSetBlipName("test2blip")
-												AddTextEntry("test2blip","Kerík")
+												AddTextEntry("test2blip","Bush")
 												AddTextComponentSubstringPlayerName('test2blip')
 												EndTextCommandSetBlipName(test2blip)
 							exports.ox_target:addBoxZone({
@@ -116,11 +116,11 @@ local option ={
 												name = "animace",
 												event = "ox_target:debug",
 												icon = "fa-solid fa-trowel",
-												label = "Pracovat",
+												label = "Start working",
 												onSelect = function()
 												if lib.progressBar({
 													duration = 5000,
-													label = "Pracování",
+													label = "Working...",
 													useWhileDead = false,
 													canCancel = true,
 													disable = {
@@ -137,7 +137,7 @@ local option ={
 														rot = vec3(0.0, 0.0, 0.0),
 														bone = 28422
 													},
-												}) then exports.ox_target:removeZone("test2") TriggerServerEvent("GiveReward") RemoveBlip(test2blip) else lib.notify( {title = "Manažer", description = "Dočesej ten keřík!", type = "error"} ) RemoveBlip(test2blip)
+												}) then exports.ox_target:removeZone("test2") TriggerServerEvent("GiveReward") RemoveBlip(test2blip) else lib.notify( {title = "Manager", description = "Do your job properly!", type = "error"} ) RemoveBlip(test2blip)
 												 end
 											end
 										}
@@ -151,7 +151,7 @@ local option ={
 												SetBlipDisplay(test3blip, 4)
 												SetBlipAsShortRange(test3blip, true)
 												BeginTextCommandSetBlipName("test3blip")
-												AddTextEntry("test3blip","Kerík")
+												AddTextEntry("test3blip","Bush")
 												AddTextComponentSubstringPlayerName('test3blip')
 												EndTextCommandSetBlipName(test3blip)
 							exports.ox_target:addBoxZone({
@@ -165,11 +165,11 @@ local option ={
 												name = "animace",
 												event = "ox_target:debug",
 												icon = "fa-solid fa-trowel",
-												label = "Pracovat",
+												label = "Start working",
 												onSelect = function()
 												if lib.progressBar({
 													duration = 5000,
-													label = "Pracování",
+													label = "Working...",
 													useWhileDead = false,
 													canCancel = true,
 													disable = {
@@ -185,7 +185,7 @@ local option ={
 														rot = vec3(0.0, 0.0, 0.0),
 														bone = 28422
 													},
-												}) then exports.ox_target:removeZone("test3") TriggerServerEvent("GiveReward") RemoveBlip(test3blip) else lib.notify( {title = "Manažer", description = "Dočesej ten keřík!", type = "error"} ) RemoveBlip(test3blip)
+												}) then exports.ox_target:removeZone("test3") TriggerServerEvent("GiveReward") RemoveBlip(test3blip) else lib.notify( {title = "Manager", description = "Do your job properly!", type = "error"} ) RemoveBlip(test3blip)
 												 end
 											end
 										}
@@ -199,7 +199,7 @@ local option ={
 												SetBlipDisplay(test4blip, 4)
 												SetBlipAsShortRange(test4blip, true)
 												BeginTextCommandSetBlipName("test4blip")
-												AddTextEntry("test4blip","Kerík")
+												AddTextEntry("test4blip","Bush")
 												AddTextComponentSubstringPlayerName('test4blip')
 												EndTextCommandSetBlipName(test4blip)
 							exports.ox_target:addBoxZone({
@@ -213,11 +213,11 @@ local option ={
 												name = "animace",
 												event = "ox_target:debug",
 												icon = "fa-solid fa-trowel",
-												label = "Pracovat",
+												label = "Start working",
 												onSelect = function()
 												if lib.progressBar({
 													duration = 5000,
-													label = "Pracování",
+													label = "Working...",
 													useWhileDead = false,
 													canCancel = true,
 													disable = {
@@ -234,7 +234,7 @@ local option ={
 														rot = vec3(0.0, 0.0, 0.0),
 														bone = 28422
 													},
-												}) then exports.ox_target:removeZone("test4") TriggerServerEvent("GiveReward") RemoveBlip(test4blip) else lib.notify( {title = "Manažer", description = "Dočesej ten keřík!", type = "error"} ) RemoveBlip(test4blip)
+												}) then exports.ox_target:removeZone("test4") TriggerServerEvent("GiveReward") RemoveBlip(test4blip) else lib.notify( {title = "Manager", description = "Do your job properly!", type = "error"} ) RemoveBlip(test4blip)
 												 end
 											end
 										}
@@ -248,7 +248,7 @@ local option ={
 												SetBlipDisplay(test5blip, 4)
 												SetBlipAsShortRange(test5blip, true)
 												BeginTextCommandSetBlipName("test5blip")
-												AddTextEntry("test5blip","Kerík")
+												AddTextEntry("test5blip","Bush")
 												AddTextComponentSubstringPlayerName('test65blip')
 												EndTextCommandSetBlipName(test5blip)
 							exports.ox_target:addBoxZone({
@@ -262,11 +262,11 @@ local option ={
 												name = "animace",
 												event = "ox_target:debug",
 												icon = "fa-solid fa-trowel",
-												label = "Pracovat",
+												label = "Start working",
 												onSelect = function()
 												if lib.progressBar({
 													duration = 5000,
-													label = "Pracování",
+													label = "Working...",
 													useWhileDead = false,
 													canCancel = true,
 													disable = {
@@ -282,7 +282,7 @@ local option ={
 														rot = vec3(0.0, 0.0, 0.0),
 														bone = 28422
 													},
-												}) then exports.ox_target:removeZone("test5") TriggerServerEvent("GiveReward") RemoveBlip(test5blip) else lib.notify( {title = "Manažer", description = "Dočesej ten keřík!", type = "error"} ) RemoveBlip(test5blip)
+												}) then exports.ox_target:removeZone("test5") TriggerServerEvent("GiveReward") RemoveBlip(test5blip) else lib.notify( {title = "Manager", description = "Do your job properly!", type = "error"} ) RemoveBlip(test5blip)
 												 end
 											end
 										}
@@ -296,7 +296,7 @@ local option ={
 												SetBlipDisplay(test6blip, 4)
 												SetBlipAsShortRange(test6blip, true)
 												BeginTextCommandSetBlipName("test6blip")
-												AddTextEntry("test6blip","Kerík")
+												AddTextEntry("test6blip","Bush")
 												AddTextComponentSubstringPlayerName('test6blip')
 												EndTextCommandSetBlipName(test6blip)
 							exports.ox_target:addBoxZone({
@@ -310,11 +310,11 @@ local option ={
 												name = "animace",
 												event = "ox_target:debug",
 												icon = "fa-solid fa-trowel",
-												label = "Pracovat",
+												label = "Start working",
 												onSelect = function()
 												if lib.progressBar({
 													duration = 5000,
-													label = "Pracování",
+													label = "Working...",
 													useWhileDead = false,
 													canCancel = true,
 													disable = {
@@ -331,7 +331,7 @@ local option ={
 														rot = vec3(0.0, 0.0, 0.0),
 														bone = 28422
 													},
-												}) then exports.ox_target:removeZone("test6") TriggerServerEvent("GiveReward") RemoveBlip(test6blip) else lib.notify( {title = "Manažer", description = "Dočesej ten keřík!", type = "error"} ) RemoveBlip(test6blip)
+												}) then exports.ox_target:removeZone("test6") TriggerServerEvent("GiveReward") RemoveBlip(test6blip) else lib.notify( {title = "Manager", description = "Do your job properly!", type = "error"} ) RemoveBlip(test6blip)
 												 end
 											end
 										}
@@ -345,13 +345,13 @@ local option ={
 				end
 			},
 			{
-				title = "Ukončit práci",
+				title = "End your job",
 				icon = "fa-solid fa-hand",
 				onSelect = function ()
 					if isHavingAjob then
 					lib.notify({
-						title = "Manažer",
-						description = "Ukončil si práci",
+						title = "Manager",
+						description = "You completed your job",
 						type = "inform"
 					})  RemoveBlip(testblip) RemoveBlip(test2blip) RemoveBlip(test3blip) RemoveBlip(test4blip) RemoveBlip(test5blip) RemoveBlip(test6blip) exports.ox_target:removeZone("test") exports.ox_target:removeZone("test2") exports.ox_target:removeZone("test3") exports.ox_target:removeZone("test4") exports.ox_target:removeZone("test5") exports.ox_target:removeZone("test6")
 
